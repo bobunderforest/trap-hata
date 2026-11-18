@@ -1,7 +1,7 @@
 const B = '#333';
 const G = '#999';
 const W = '#fff';
-let C = 'brand';
+const C = 'brand';
 
 const frames = {
 

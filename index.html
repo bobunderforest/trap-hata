@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Trap Hata</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <canvas></canvas>
+    <button
+      class="info-button"
+      type="button"
+      aria-label="About this game"
+      aria-haspopup="dialog"
+    >
+      i
+    </button>
+    <dialog class="about" aria-labelledby="about-title" closedby="any">
+      <h2 class="about__title" id="about-title">Trap Hata</h2>
+      <p>
+        This small game was made for a hackathon back in 2016 by two friends,
+        <br />
+        <a href="https://github.com/jeetiss" target="_blank" rel="noopener"
+          >Dmitrii Ivakhnenko</a
+        >
+        and
+        <a href="https://bobunderforest.me/" target="_blank" rel="noopener"
+          >Dmitrii Podlesnyi</a
+        >.
+      </p>
+      <p>
+        You can check its source code on the
+        <a
+          href="https://github.com/bobunderforest/trap-hata"
+          target="_blank"
+          rel="noopener"
+          >Github repository</a
+        >.
+      </p>
+      <form method="dialog">
+        <button class="about__close" type="submit">Close</button>
+      </form>
+    </dialog>
+    <aside class="lobby">
+      <a class="lobby__link" target="_blank" rel="noopener"
+        ><div class="lobby__qr"></div
+      ></a>
+      <p class="lobby__status">Connecting…</p>
+      <p class="lobby__count"></p>
+    </aside>
+    <script type="module" src="/app/main.js"></script>
+  </body>
+</html>

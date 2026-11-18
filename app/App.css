@@ -12,3 +12,98 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
+
+canvas {
+  display: block;
+}
+
+.lobby {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 152px;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font: 13px/1.4 'Pixelify Sans', monospace;
+  text-align: center;
+}
+
+.lobby__qr svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.lobby__status {
+  margin-top: 8px;
+}
+
+.lobby__count:empty {
+  display: none;
+}
+
+.info-button {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font: 700 18px/1 'Pixelify Sans', monospace;
+  cursor: pointer;
+}
+
+.info-button:hover,
+.info-button:focus-visible {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.about {
+  margin: auto;
+  max-width: min(520px, calc(100vw - 32px));
+  padding: 24px;
+  border: 0;
+  border-radius: 8px;
+  background: #3b302a;
+  color: #fff;
+  font: 16px/1.5 'Pixelify Sans', monospace;
+}
+
+.about::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.about__title {
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+.about p + p {
+  margin-top: 12px;
+}
+
+.about a {
+  color: #ffd166;
+}
+
+.about__close {
+  margin-top: 20px;
+  padding: 8px 14px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.about__close:hover,
+.about__close:focus-visible {
+  background: rgba(255, 255, 255, 0.15);
+}

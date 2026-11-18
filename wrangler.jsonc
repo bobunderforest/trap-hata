@@ -1,0 +1,38 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "trap-hata",
+  "main": "worker/index.js",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "trap-hata.bobunderforest.me", "custom_domain": true }],
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "run_worker_first": ["/signal/*"],
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none",
+  },
+  "vars": {
+    "MAX_ACTIVE_ROOMS": "20",
+    "MAX_NEW_ROOMS_PER_DAY": "200",
+    "MAX_ACTIVE_ROOMS_PER_IP": "10",
+    "MAX_NEW_ROOMS_PER_IP_PER_DAY": "50",
+  },
+  "durable_objects": {
+    "bindings": [
+      { "name": "ROOMS", "class_name": "Room" },
+      { "name": "ROOM_REGISTRY", "class_name": "RoomRegistry" },
+    ],
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["Room"] },
+    { "tag": "v2", "new_sqlite_classes": ["RoomRegistry"] },
+  ],
+  "ratelimits": [
+    {
+      "name": "SIGNAL_RATE_LIMIT",
+      "namespace_id": "48213",
+      "simple": { "limit": 60, "period": 60 },
+    },
+  ],
+  "observability": { "enabled": true },
+}

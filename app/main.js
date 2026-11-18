@@ -187,9 +187,11 @@ const STATUS_TEXT = {
   busy: 'Too many games right now — retrying in a minute',
 };
 
+const JOIN_CODE_COLORS = { blackColor: '#3b302a', whiteColor: '#f4e8d8' };
+
 function showJoinCode(room) {
   const joinUrl = padUrlReachableFromPhone(room);
-  lobby.querySelector('.lobby__qr').innerHTML = renderSVG(joinUrl, { border: 2 });
+  lobby.querySelector('.lobby__qr').innerHTML = renderSVG(joinUrl, { border: 2, ...JOIN_CODE_COLORS });
   lobby.querySelector('.lobby__link').href = joinUrl;
 }
 

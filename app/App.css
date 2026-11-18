@@ -1,10 +1,10 @@
 body {
-	background-color: #6D5B4F;
+  background-color: #6d5b4f;
 }
 
 body,
 html {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 * {
@@ -26,7 +26,9 @@ canvas {
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.35);
   color: #fff;
-  font: 13px/1.4 'Pixelify Sans', monospace;
+  font:
+    13px/1.4 "Pixelify Sans",
+    monospace;
   text-align: center;
 }
 
@@ -55,8 +57,15 @@ canvas {
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.35);
   color: #fff;
-  font: 700 18px/1 'Pixelify Sans', monospace;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-button__icon {
+  display: block;
+  fill: currentColor;
 }
 
 .info-button:hover,
@@ -72,7 +81,9 @@ canvas {
   border-radius: 8px;
   background: #3b302a;
   color: #fff;
-  font: 16px/1.5 'Pixelify Sans', monospace;
+  font:
+    16px/1.5 "Pixelify Sans",
+    monospace;
 }
 
 .about::backdrop {
@@ -81,6 +92,10 @@ canvas {
 
 .about__title {
   margin-bottom: 16px;
+  font-size: 36px;
+}
+
+.about p {
   font-size: 24px;
 }
 
@@ -101,6 +116,7 @@ canvas {
   color: #fff;
   font: inherit;
   cursor: pointer;
+  font-size: 24px;
 }
 
 .about__close:hover,
